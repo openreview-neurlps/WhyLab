@@ -1,0 +1,10 @@
+severity,detector,d,s,f
+mild,adwin,700.0,0.0,0.0
+mild,entropy_weighted,700.0,0.0,0.03
+mild,uniform,700.0,0.0,0.03
+moderate,adwin,700.0,0.0,0.0
+moderate,entropy_weighted,618.85,199.98,0.03
+moderate,uniform,642.2,178.53,0.03
+severe,adwin,646.2,135.29,0.0
+severe,entropy_weighted,521.7,261.25,0.03
+severe,uniform,585.7,235.51,0.03

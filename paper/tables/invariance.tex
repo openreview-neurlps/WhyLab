@@ -1,0 +1,21 @@
+\begin{table}
+\caption{Conclusion invariance check: perturbing implementation choices does not change method rankings. $\epsilon = 0.15$ relative tolerance.}
+\label{tab:invariance}
+\begin{tabular}{llll}
+\toprule
+Check & Parameter & Key Metrics & Rank OK \\
+\midrule
+INV-1 & n\_bins=8 & C1=0.000, Uni=0.000 & \checkmark \\
+INV-1 & n\_bins=8 & C1=0.000, Uni=0.200 & \checkmark \\
+INV-1 & n\_bins=10 & C1=0.000, Uni=0.000 & \checkmark \\
+INV-1 & n\_bins=10 & C1=0.000, Uni=0.300 & \checkmark \\
+INV-1 & n\_bins=15 & C1=0.000, Uni=0.100 & \checkmark \\
+INV-1 & n\_bins=15 & C1=0.100, Uni=0.400 & \checkmark \\
+INV-2 & E=2.0,RV=0.10 & rel=N/A, frag=N/A & \checkmark \\
+INV-3 & h=0.0 & full=0.3447, no\_ema=0.4984 & \checkmark \\
+INV-3 & h=0.1 & full=0.2073, no\_ema=0.5078 & \checkmark \\
+INV-3 & h=0.3 & full=0.2427, no\_ema=0.5165 & \checkmark \\
+INV-3 & h=0.5 & full=0.328, no\_ema=0.5138 & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table}

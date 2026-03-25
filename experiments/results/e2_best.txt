@@ -1,0 +1,6 @@
+﻿none     E=0.0 RV=0.00 | FDR=0.198 rec=1.000 prec=0.484 f1=0.652 frag_rej=0.000 ret=1.000
+E_only   E=3.0 RV=0.00 | FDR=0.104 rec=0.596 prec=0.806 f1=0.685 frag_rej=0.719 ret=0.358
+RV_only  E=0.0 RV=0.05 | FDR=0.071 rec=0.580 prec=0.682 f1=0.626 frag_rej=0.819 ret=0.412
+E+RV     E=3.0 RV=0.10 | FDR=0.044 rec=0.506 prec=0.900 f1=0.647 frag_rej=0.905 ret=0.272
+
+No filter: FDR=0.198 recall=1.000 frag_rej=0.000 accepted_frag=59.9

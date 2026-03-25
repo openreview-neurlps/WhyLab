@@ -1,0 +1,281 @@
+{
+  "meta": {
+    "datasets": [
+      "ihdp",
+      "acic",
+      "jobs",
+      "twins",
+      "criteo",
+      "lalonde"
+    ],
+    "n_replications": 3,
+    "timestamp": "20260215_075824",
+    "gpu": false
+  },
+  "results": {
+    "ihdp": {
+      "S-Learner": {
+        "pehe_mean": 1.3789779133195121,
+        "pehe_std": 0.018033112239206797,
+        "ate_bias_mean": 0.09331936579731588,
+        "ate_bias_std": 0.049160567154568506
+      },
+      "T-Learner": {
+        "pehe_mean": 1.1476775405824367,
+        "pehe_std": 0.024974488011960227,
+        "ate_bias_mean": 0.02791005897626479,
+        "ate_bias_std": 0.014588991723147643
+      },
+      "X-Learner": {
+        "pehe_mean": 1.3166914922831692,
+        "pehe_std": 0.011488549527869804,
+        "ate_bias_mean": 0.037472745236325565,
+        "ate_bias_std": 0.02745127677275858
+      },
+      "DR-Learner": {
+        "pehe_mean": 1.185125511821468,
+        "pehe_std": 0.027491890799310408,
+        "ate_bias_mean": 0.02706220914911391,
+        "ate_bias_std": 0.013290414989378193
+      },
+      "R-Learner": {
+        "pehe_mean": 1.6342763167094863,
+        "pehe_std": 0.012448213138294445,
+        "ate_bias_mean": 0.23266282058870189,
+        "ate_bias_std": 0.1232036429975117
+      },
+      "LinearDML": {
+        "pehe_mean": 1.4747193709128024,
+        "pehe_std": 0.012959339157852402,
+        "ate_bias_mean": 0.12787573848420597,
+        "ate_bias_std": 0.060106890427896846
+      },
+      "Ensemble": {
+        "pehe_mean": 1.205509689437953,
+        "pehe_std": 0.017231552821380145,
+        "ate_bias_mean": 0.07232806530132933,
+        "ate_bias_std": 0.04041821650864373
+      }
+    },
+    "acic": {
+      "S-Learner": {
+        "pehe_mean": 0.5038837348621623,
+        "pehe_std": 0.012097545582115659,
+        "ate_bias_mean": 0.010821440907319365,
+        "ate_bias_std": 0.00899977069362028
+      },
+      "T-Learner": {
+        "pehe_mean": 0.8466571020638591,
+        "pehe_std": 0.005982427547541393,
+        "ate_bias_mean": 0.04986156023763725,
+        "ate_bias_std": 0.014329324649834427
+      },
+      "X-Learner": {
+        "pehe_mean": 0.5713499508847861,
+        "pehe_std": 0.0006502805613933089,
+        "ate_bias_mean": 0.02643151060562543,
+        "ate_bias_std": 0.0066044647396766585
+      },
+      "DR-Learner": {
+        "pehe_mean": 0.7948435568875061,
+        "pehe_std": 0.011232196946407178,
+        "ate_bias_mean": 0.0483005360772412,
+        "ate_bias_std": 0.014201452083438206
+      },
+      "R-Learner": {
+        "pehe_mean": 1.182269590102095,
+        "pehe_std": 0.026134449975150617,
+        "ate_bias_mean": 0.136504047337853,
+        "ate_bias_std": 0.03162426718475564
+      },
+      "LinearDML": {
+        "pehe_mean": 0.6210733743669808,
+        "pehe_std": 0.005628907180496492,
+        "ate_bias_mean": 0.07739242749509294,
+        "ate_bias_std": 0.029139558477318
+      },
+      "Ensemble": {
+        "pehe_mean": 0.616015652875625,
+        "pehe_std": 0.012427522843314248,
+        "ate_bias_mean": 0.011068415462116565,
+        "ate_bias_std": 0.0041007854419201385
+      }
+    },
+    "jobs": {
+      "S-Learner": {
+        "pehe_mean": 297.13314086510195,
+        "pehe_std": 4.7344574916119715,
+        "ate_bias_mean": 50.33727683127032,
+        "ate_bias_std": 32.65697827535559
+      },
+      "T-Learner": {
+        "pehe_mean": 496.2619138959624,
+        "pehe_std": 6.908355082609692,
+        "ate_bias_mean": 34.11416988693335,
+        "ate_bias_std": 8.357631220374936
+      },
+      "X-Learner": {
+        "pehe_mean": 391.2853851347965,
+        "pehe_std": 13.901104312759701,
+        "ate_bias_mean": 29.673757270206504,
+        "ate_bias_std": 4.887112322368991
+      },
+      "DR-Learner": {
+        "pehe_mean": 542.5961236632235,
+        "pehe_std": 7.198448725863113,
+        "ate_bias_mean": 34.17437357799266,
+        "ate_bias_std": 8.514926381683486
+      },
+      "R-Learner": {
+        "pehe_mean": 718.1535209209851,
+        "pehe_std": 38.997280245987696,
+        "ate_bias_mean": 108.41155444747407,
+        "ate_bias_std": 111.96627629010469
+      },
+      "LinearDML": {
+        "pehe_mean": 163.19121716377992,
+        "pehe_std": 25.78912432108187,
+        "ate_bias_mean": 28.498410354614936,
+        "ate_bias_std": 28.26868039943422
+      },
+      "Ensemble": {
+        "pehe_mean": 397.562286310248,
+        "pehe_std": 7.519634281416951,
+        "ate_bias_mean": 22.75844866609873,
+        "ate_bias_std": 19.50024168387729
+      }
+    },
+    "twins": {
+      "S-Learner": {
+        "pehe_mean": 0.1793889103904973,
+        "pehe_std": 0.0026081331538134645,
+        "ate_bias_mean": 0.021592155911898742,
+        "ate_bias_std": 0.004058956444088456
+      },
+      "T-Learner": {
+        "pehe_mean": 0.28129095591394465,
+        "pehe_std": 0.003799257452077616,
+        "ate_bias_mean": 0.003589776254393976,
+        "ate_bias_std": 0.00221659367566346
+      },
+      "X-Learner": {
+        "pehe_mean": 0.1959791767354977,
+        "pehe_std": 0.006573071802092693,
+        "ate_bias_mean": 0.008178823226166662,
+        "ate_bias_std": 0.0030145424610455913
+      },
+      "DR-Learner": {
+        "pehe_mean": 0.268076860656378,
+        "pehe_std": 0.004820381091847318,
+        "ate_bias_mean": 0.0038485948547565263,
+        "ate_bias_std": 0.001878661031611703
+      },
+      "R-Learner": {
+        "pehe_mean": 0.43003369231872984,
+        "pehe_std": 0.022441302753654118,
+        "ate_bias_mean": 0.05916771532381152,
+        "ate_bias_std": 0.02354477522970155
+      },
+      "LinearDML": {
+        "pehe_mean": 0.18048097152979511,
+        "pehe_std": 0.0019865845097113313,
+        "ate_bias_mean": 0.03697144066651833,
+        "ate_bias_std": 0.010718487852984373
+      },
+      "Ensemble": {
+        "pehe_mean": 0.20325515402599095,
+        "pehe_std": 0.005986767488369741,
+        "ate_bias_mean": 0.013084182448148093,
+        "ate_bias_std": 0.006564337076930628
+      }
+    },
+    "criteo": {
+      "S-Learner": {
+        "pehe_mean": 0.0,
+        "pehe_std": 0.0,
+        "ate_bias_mean": 0.0,
+        "ate_bias_std": 0.0
+      },
+      "T-Learner": {
+        "pehe_mean": 0.0,
+        "pehe_std": 0.0,
+        "ate_bias_mean": 0.0,
+        "ate_bias_std": 0.0
+      },
+      "X-Learner": {
+        "pehe_mean": 0.0,
+        "pehe_std": 0.0,
+        "ate_bias_mean": 0.0,
+        "ate_bias_std": 0.0
+      },
+      "DR-Learner": {
+        "pehe_mean": 0.0,
+        "pehe_std": 0.0,
+        "ate_bias_mean": 0.0,
+        "ate_bias_std": 0.0
+      },
+      "R-Learner": {
+        "pehe_mean": 0.0,
+        "pehe_std": 0.0,
+        "ate_bias_mean": 0.0,
+        "ate_bias_std": 0.0
+      },
+      "LinearDML": {
+        "pehe_mean": 0.0,
+        "pehe_std": 0.0,
+        "ate_bias_mean": 0.0,
+        "ate_bias_std": 0.0
+      },
+      "Ensemble": {
+        "pehe_mean": 0.0,
+        "pehe_std": 0.0,
+        "ate_bias_mean": 0.0,
+        "ate_bias_std": 0.0
+      }
+    },
+    "lalonde": {
+      "S-Learner": {
+        "pehe_mean": 729.1092915438156,
+        "pehe_std": 82.04302234801868,
+        "ate_bias_mean": 67.40743383099114,
+        "ate_bias_std": 38.40778467349656
+      },
+      "T-Learner": {
+        "pehe_mean": 1720.9812268369376,
+        "pehe_std": 65.44783181653922,
+        "ate_bias_mean": 89.14318373261297,
+        "ate_bias_std": 45.83576785056573
+      },
+      "X-Learner": {
+        "pehe_mean": 1309.4559131563917,
+        "pehe_std": 101.74531513903364,
+        "ate_bias_mean": 93.50671729646258,
+        "ate_bias_std": 79.25552636534324
+      },
+      "DR-Learner": {
+        "pehe_mean": 1799.6960752947562,
+        "pehe_std": 95.5476713299846,
+        "ate_bias_mean": 89.67277275554459,
+        "ate_bias_std": 47.33058489058505
+      },
+      "R-Learner": {
+        "pehe_mean": 1959.4372981341285,
+        "pehe_std": 137.9232623637367,
+        "ate_bias_mean": 79.17018063050766,
+        "ate_bias_std": 93.20618277305262
+      },
+      "LinearDML": {
+        "pehe_mean": 410.8311874752617,
+        "pehe_std": 46.00516676854791,
+        "ate_bias_mean": 74.04527754651811,
+        "ate_bias_std": 42.79147309909849
+      },
+      "Ensemble": {
+        "pehe_mean": 1191.6345983850933,
+        "pehe_std": 75.06461369284591,
+        "ate_bias_mean": 73.50597049867959,
+        "ate_bias_std": 29.797670520079382
+      }
+    }
+  }
+}

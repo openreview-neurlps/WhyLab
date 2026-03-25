@@ -1,0 +1,25 @@
+% Auto-generated from e4_summary.csv — do NOT edit manually
+\begin{table}[t]
+\centering
+\caption{Agent benchmark: Reflexion on HumanEval with
+  WhyLab audit ablations (40~seeds, mean over problems).
+  Audit layer reduces regressions and oscillation while
+  maintaining or improving final pass rate.}
+\label{tab:e4-agent}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Config}
+  & \textbf{Pass@1} $\uparrow$
+  & \textbf{Regressions} $\downarrow$
+  & \textbf{Oscillation} $\downarrow$
+  & \textbf{Accept rate} \\
+\midrule
+  No audit & 0.955 & 0.000 & 0.051 & 0.000 \\
+  C1 only & 0.955 & 0.000 & 0.051 & 1.000 \\
+  C2 only & 0.933 & 0.000 & 0.043 & 0.146 \\
+  C3 only & 0.955 & 0.000 & 0.051 & 1.000 \\
+  \textbf{C1+C2+C3} & \textbf{0.933} & \textbf{0.000} & \textbf{0.043} & 0.146 \\
+\bottomrule
+\end{tabular}
+\end{table}

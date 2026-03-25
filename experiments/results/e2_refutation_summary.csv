@@ -1,0 +1,13 @@
+refuter,type,n,pass_rate,mean_delta,std_delta
+data_subset,fragile_mild,797,0.3752,3.543,28.108
+data_subset,fragile_strong,820,0.4146,2.2009,8.554
+data_subset,reliable_strong,765,0.9856,0.1719,0.1505
+data_subset,reliable_weak,818,0.7592,11.3789,307.1824
+placebo_treatment,fragile_mild,797,0.2886,4.8898,42.2952
+placebo_treatment,fragile_strong,820,0.3622,6.0185,85.0932
+placebo_treatment,reliable_strong,765,0.8458,0.2877,0.2584
+placebo_treatment,reliable_weak,818,0.5697,1.2478,4.7633
+random_common_cause,fragile_mild,797,0.6261,0.4531,2.9281
+random_common_cause,fragile_strong,820,0.6561,0.5816,5.054
+random_common_cause,reliable_strong,765,0.9739,0.0307,0.0441
+random_common_cause,reliable_weak,818,0.8386,0.1287,0.5191

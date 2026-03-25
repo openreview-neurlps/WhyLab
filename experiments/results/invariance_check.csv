@@ -1,0 +1,12 @@
+check,parameter,severity,c1_detect_rate,uni_detect_rate,c1_wins,fragile_rate,ranking_preserved,full_viol,no_ema_viol,beta_high_viol,delta_within_eps
+INV-1,n_bins=8,moderate,0.0,0.0,1.0,,,,,,
+INV-1,n_bins=8,severe,0.0,0.2,0.0,,,,,,
+INV-1,n_bins=10,moderate,0.0,0.0,1.0,,,,,,
+INV-1,n_bins=10,severe,0.0,0.3,0.0,,,,,,
+INV-1,n_bins=15,moderate,0.0,0.1,0.0,,,,,,
+INV-1,n_bins=15,severe,0.1,0.4,0.0,,,,,,
+INV-2,"E=2.0,RV=0.10",,,,,0.2207,1.0,,,,
+INV-3,h=0.0,,,,,,1.0,0.3447,0.4984,0.3117,1.0
+INV-3,h=0.1,,,,,,1.0,0.2073,0.5078,0.17,1.0
+INV-3,h=0.3,,,,,,1.0,0.2427,0.5165,0.2379,1.0
+INV-3,h=0.5,,,,,,1.0,0.328,0.5138,0.3274,1.0

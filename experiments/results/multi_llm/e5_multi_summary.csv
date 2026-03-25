@@ -1,0 +1,4 @@
+model,ablation,pass_rate,safe_pass_rate,mean_regressions,mean_oscillation
+gemini-2.5-flash,C2_calibrated,0.84,0.84,0.0,0.0593
+gemini-2.5-flash,full_calibrated,0.84,0.84,0.0,0.0593
+gemini-2.5-flash,none,0.82,0.82,0.0,0.0493

@@ -1,0 +1,31 @@
+% Auto-generated from e2_summary.csv — do NOT edit manually
+\begin{table}[t]
+\centering
+\caption{Filtering performance under two operating regimes from the
+  threshold sweep (40~seeds, mean over synthetic observational studies).
+  For each regime, the operating point minimizing fragile rate
+  is selected per filter.
+  E-values: $d = |ATE|/\sigma_{\text{pooled}}$;
+  $RV_q$: $f_q = |\hat{\beta}|/\text{SE}$.}
+\label{tab:e2-filter}
+\small
+\begin{tabular}{@{}llcccc@{}}
+\toprule
+\textbf{Regime} & \textbf{Filter}
+  & \textbf{Frag.\,rate} $\downarrow$
+  & \textbf{Recall} $\uparrow$
+  & \textbf{Frag.\,rej.} $\uparrow$
+  & \textbf{Retention} \\
+\midrule
+  \multirow{4}{*}{\rotatebox[origin=c]{90}{\scriptsize Recall$\geq$0.9}} & No filter & 0.403 & 1.000 & 0.000 & 1.000 \\
+   & E-only ($E{\geq}1.5$) & 0.335 & 0.963 & 0.312 & 0.813 \\
+   & $RV_q$-only ($RV_q{\geq}0.50$) & 0.287 & 0.939 & 0.475 & 0.718 \\
+   & \textbf{C2} ($E{\geq}1.0,\; RV_q{\geq}0.50$) & \textbf{0.287} & 0.939 & \textbf{0.475} & 0.718 \\
+\midrule
+  \multirow{4}{*}{\rotatebox[origin=c]{90}{\scriptsize Recall$\geq$0.5}} & No filter & 0.403 & 1.000 & 0.000 & 1.000 \\
+   & E-only ($E{\geq}2.5$) & 0.134 & 0.677 & 0.873 & 0.387 \\
+   & $RV_q$-only ($RV_q{\geq}0.50$) & 0.287 & 0.939 & 0.475 & 0.718 \\
+   & \textbf{C2} ($E{\geq}2.5,\; RV_q{\geq}0.15$) & \textbf{0.134} & 0.677 & \textbf{0.873} & 0.387 \\
+\bottomrule
+\end{tabular}
+\end{table}

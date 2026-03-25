@@ -1,0 +1,192 @@
+# E1 + E3a Experiment Configuration
+# All runs: 40 seeds, mean +/- 95% CI
+
+experiment:
+  seeds: 40
+  rng_base_seed: 42
+
+e1:
+  name: "Drift Detection"
+  horizon: 1000
+  shift_time: 300
+  K: 3  # number of streams
+  streams:
+    - name: "low_entropy"
+      entropy_level: 0.1  # very concentrated, high information
+      n_bins: 10
+    - name: "mid_entropy"
+      entropy_level: 1.5
+      n_bins: 10
+    - name: "high_entropy"
+      entropy_level: 3.0  # near-uniform, low information
+      n_bins: 10
+  severities:
+    mild: 0.5
+    moderate: 0.8
+    severe: 1.0
+  shift_stream: 0  # index of stream that shifts (low_entropy)
+  fpr_target: 0.05
+  calibration_window: 200  # steps 0..199 for threshold calibration
+  detectors:
+    - "entropy_weighted"   # C1
+    - "uniform"            # B4
+    - "adwin"              # B5
+  adwin_delta: 0.002  # ADWIN sensitivity (tuned for FPR match)
+
+e3a:
+  name: "Stability Validation"
+  horizon: 1000
+  dim: 5
+  A_diag: [1.0, 2.0, 3.0, 4.0, 5.0]
+  R_star: 100.0
+  theta0_scale: 3.0  # initial theta ~ N(0, scale)
+  hallucination_rates: [0.0, 0.1, 0.3, 0.5]
+  noise_sigma: 0.5  # base Gaussian noise std
+  hallucination_sigma: 5.0  # hallucination noise std
+  ema_alpha: 0.1  # EMA for R_max proxy
+  controllers:
+    - name: "no_damping"    # B1
+      zeta: 0.5
+    - name: "cosine"        # B2
+      zeta_init: 0.5
+      zeta_floor: 0.01
+    - name: "grad_clip"     # B3
+      c: 1.0
+      zeta_max_clip: 0.5
+    - name: "adaptive"      # C3
+      epsilon_floor: 0.01
+      ceiling: 0.8
+
+e4:
+  name: "Agent Benchmark"
+  benchmark: "humaneval"
+  max_attempts: 5          # Reflexion max retry per problem
+  problems_subset: null    # null = all 164, integer = pilot subset
+  splits:
+    pilot:  {n_problems: 10, n_seeds: 2}   # calibration only
+    main:   {n_problems: 30, n_seeds: 5}   # holdout evaluation
+    full:   {n_problems: 164, n_seeds: 20} # optional extension
+  llm:
+    model: "gemini-2.0-flash"
+    temperature: 0.7       # Reflexion standard (seed diversity)
+    max_tokens: 2048
+    prompt_version: "v1"
+    cache_mode: "hybrid"   # online | replay | hybrid
+  audit:
+    c1_window: 5                    # agent context: max_attempts=5
+    c1_agreement_threshold: 0.4     # conservative alarm (agent has few data points)
+    c2_e_thresh: 1.5                # relaxed for single-problem cheap eval
+    c2_rv_thresh: 0.05              # relaxed for short score windows
+    c3_epsilon_floor: 0.01          # damping floor
+    c3_ceiling: 0.8                 # damping ceiling
+  ablations:
+    - name: "none"
+      c1: false
+      c2: false
+      c3: false
+    - name: "C1_only"
+      c1: true
+      c2: false
+      c3: false
+    - name: "C2_default"          # observational-study thresholds
+      c1: false
+      c2: true
+      c3: false
+      c2_e_thresh: 2.0
+      c2_rv_thresh: 0.1
+    - name: "C2_calibrated"       # environment-adapted thresholds
+      c1: false
+      c2: true
+      c3: false
+      c2_e_thresh: 1.5
+      c2_rv_thresh: 0.05
+    - name: "C3_only"
+      c1: false
+      c2: false
+      c3: true
+    - name: "full_default"        # all components, observational thresholds
+      c1: true
+      c2: true
+      c3: true
+      c2_e_thresh: 2.0
+      c2_rv_thresh: 0.1
+    - name: "full_calibrated"     # all components, env-adapted thresholds
+      c1: true
+      c2: true
+      c3: true
+      c2_e_thresh: 1.5
+      c2_rv_thresh: 0.05
+    - name: "none_stress"         # stress: longer loop, no audit
+      c1: false
+      c2: false
+      c3: false
+      max_attempts: 10
+    - name: "full_stress"         # stress: longer loop + calibrated audit
+      c1: true
+      c2: true
+      c3: true
+      c2_e_thresh: 1.5
+      c2_rv_thresh: 0.05
+      max_attempts: 10
+
+e5:
+  name: "SWE-bench Agent Benchmark"
+  benchmark: "swe-bench-lite"
+  max_attempts: 7             # max retry per problem
+  problems_subset: null       # null = all 300
+  eval_mode: "lightweight"    # "lightweight" or "docker"
+  splits:
+    pilot:  {n_problems: 30, n_seeds: 2}    # quick validation
+    main:   {n_problems: 300, n_seeds: 5}   # paper results
+    full:   {n_problems: 300, n_seeds: 10}  # extended (optional)
+  llm:
+    model: "gemini-2.0-flash"
+    temperature: 0.7
+    max_tokens: 4096           # patches need more tokens
+    prompt_version: "v1"
+    cache_mode: "hybrid"
+  max_tokens_per_seed: 1000000
+  audit:
+    c1_window: 5
+    c1_agreement_threshold: 0.4
+    c2_e_thresh: 1.5           # calibrated default
+    c2_rv_thresh: 0.05
+    c3_epsilon_floor: 0.01
+    c3_ceiling: 0.8
+  ablations:
+    - name: "none"
+      c1: false
+      c2: false
+      c3: false
+    - name: "simple_retry"     # strawman: retry without reflection
+      c1: false
+      c2: false
+      c3: false
+      # (reflexion disabled -- handled in swebench_reflexion.py via flag)
+    - name: "C1_only"
+      c1: true
+      c2: false
+      c3: false
+    - name: "C2_default"
+      c1: false
+      c2: true
+      c3: false
+      c2_e_thresh: 2.0
+      c2_rv_thresh: 0.1
+    - name: "C2_calibrated"
+      c1: false
+      c2: true
+      c3: false
+      c2_e_thresh: 1.5
+      c2_rv_thresh: 0.05
+    - name: "C3_only"
+      c1: false
+      c2: false
+      c3: true
+    - name: "full_calibrated"
+      c1: true
+      c2: true
+      c3: true
+      c2_e_thresh: 1.5
+      c2_rv_thresh: 0.05
+

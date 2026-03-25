@@ -1,0 +1,61 @@
+============================================================
+E5 SUBSET ANALYSIS
+============================================================
+
+Total unique problems: 300
+Problems with oscillation (baseline): 45
+Problems needing >1 attempt: 119
+Problems solved on 1st attempt: 225
+
+============================================================
+TABLE A: Oscillating Problems Only (45 problems)
+============================================================
+Ablation             Pass     OscFree  MeanOsc    MeanAttempts Recovery
+none                 0.511    0.600    0.2676     4.84         90
+simple_retry         0.404    0.707    0.1964     5.24         66
+C1_only              0.511    0.600    0.2676     4.84         90
+C2_calibrated        0.409    0.702    0.2356     5.08         67
+C3_only              0.511    0.600    0.2676     4.84         90
+full_calibrated      0.409    0.702    0.2356     5.08         67
+
+============================================================
+TABLE B: Non-Oscillating Problems (255 problems)
+============================================================
+Ablation             Pass     MeanAttempts
+none                 0.718    2.69        
+simple_retry         0.725    2.67        
+C1_only              0.718    2.69        
+C2_calibrated        0.720    2.69        
+C3_only              0.718    2.69        
+full_calibrated      0.720    2.69        
+
+============================================================
+TABLE C: New Metrics (ALL 300 problems)
+============================================================
+Ablation             Pass@1   OscFreeRate  ConvEff    SafePass   TotalOscEp
+none                 0.687    0.940        0.9451     0.687      90        
+simple_retry         0.677    0.949        0.9523     0.677      76        
+C1_only              0.687    0.940        0.9451     0.687      90        
+C2_calibrated        0.673    0.953        0.9592     0.673      70        
+C3_only              0.687    0.940        0.9451     0.687      90        
+full_calibrated      0.673    0.953        0.9592     0.673      70        
+
+============================================================
+TABLE D: C2 vs Baselines Key Comparison
+============================================================
+
+none:
+  ALL: pass=0.687 osc_index=0.0401 osc_episodes=90
+  OSC-SUBSET: pass=0.511 osc_index=0.2676 osc_episodes=90
+
+simple_retry:
+  ALL: pass=0.677 osc_index=0.0328 osc_episodes=76
+  OSC-SUBSET: pass=0.404 osc_index=0.1964 osc_episodes=66
+
+C2_calibrated:
+  ALL: pass=0.673 osc_index=0.0360 osc_episodes=70
+  OSC-SUBSET: pass=0.409 osc_index=0.2356 osc_episodes=67
+
+full_calibrated:
+  ALL: pass=0.673 osc_index=0.0360 osc_episodes=70
+  OSC-SUBSET: pass=0.409 osc_index=0.2356 osc_episodes=67

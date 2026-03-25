@@ -1,0 +1,18 @@
+=== Detection Rates (40 seeds) ===
+mild,entropy_weighted,0.0250,40
+mild,uniform,0.0000,40
+mild,adwin,0.0000,40
+moderate,entropy_weighted,0.2000,40
+moderate,uniform,0.1250,40
+moderate,adwin,0.0250,40
+severe,entropy_weighted,0.4000,40
+severe,uniform,0.3250,40
+severe,adwin,0.3000,40
+
+=== Paired: C1 vs Uniform ===
+moderate: C1_det=8/40 Uni_det=5/40
+  discordant: C1only=3 Unionly=0
+  cond_delay: diff=-4.4 t=-3.32 p=0.029 n=5
+severe: C1_det=16/40 Uni_det=13/40
+  discordant: C1only=3 Unionly=0
+  cond_delay: diff=-34.2 t=-1.69 p=0.117 n=13

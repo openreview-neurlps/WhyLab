@@ -1,0 +1,13 @@
+=== E3b Full Metrics (per-noise) ===
+
+--- Gaussian ---
+  C3_EMA     viol=0.344 pearson=0.808 conv=0.800 final_V=1.78 deadlock=0.000
+  C3_raw     viol=0.512 pearson=0.697 conv=0.925 final_V=0.95 deadlock=0.000
+
+--- Student-t(3) ---
+  C3_EMA     viol=0.290 pearson=0.700 conv=0.675 final_V=6.97 deadlock=0.000
+  C3_raw     viol=0.513 pearson=0.678 conv=0.850 final_V=1.23 deadlock=0.000
+
+--- Student-t(1.5) ---
+  C3_EMA     viol=0.176 pearson=0.674 conv=0.350 final_V=17.57 deadlock=0.046
+  C3_raw     viol=0.510 pearson=0.757 conv=0.825 final_V=2.05 deadlock=0.004

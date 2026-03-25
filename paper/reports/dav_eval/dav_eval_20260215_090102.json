@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "n_scenarios": 10,
+    "timestamp": "20260215_090102"
+  },
+  "metrics": {
+    "accuracy": 0.8,
+    "correct_count": 8,
+    "total_count": 10,
+    "avg_confidence": 0.64773,
+    "calibration": {
+      "avg_correct_confidence": 0.7031000000000001,
+      "avg_wrong_confidence": 0.42625,
+      "calibration_gap": 0.27685000000000004
+    },
+    "evidence_coverage": {
+      "avg_source_types": 5.5,
+      "min_source_types": 5,
+      "max_source_types": 6
+    },
+    "cross_exam_balance": {
+      "avg_balance": 0.0
+    }
+  },
+  "details": [
+    {
+      "scenario": "scenario_01",
+      "ground_truth": "VERIFIED",
+      "predicted": "VERIFIED",
+      "confidence": 1.0,
+      "evidence_count": 5,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_02",
+      "ground_truth": "REFUTED",
+      "predicted": "REFUTED",
+      "confidence": 0.1793,
+      "evidence_count": 6,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_03",
+      "ground_truth": "VERIFIED",
+      "predicted": "VERIFIED",
+      "confidence": 1.0,
+      "evidence_count": 5,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_04",
+      "ground_truth": "REFUTED",
+      "predicted": "INSUFFICIENT",
+      "confidence": 0.4067,
+      "evidence_count": 6,
+      "correct": false
+    },
+    {
+      "scenario": "scenario_05",
+      "ground_truth": "VERIFIED",
+      "predicted": "VERIFIED",
+      "confidence": 1.0,
+      "evidence_count": 5,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_06",
+      "ground_truth": "REFUTED",
+      "predicted": "REFUTED",
+      "confidence": 0.1937,
+      "evidence_count": 6,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_07",
+      "ground_truth": "VERIFIED",
+      "predicted": "VERIFIED",
+      "confidence": 1.0,
+      "evidence_count": 5,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_08",
+      "ground_truth": "REFUTED",
+      "predicted": "INSUFFICIENT",
+      "confidence": 0.4458,
+      "evidence_count": 6,
+      "correct": false
+    },
+    {
+      "scenario": "scenario_09",
+      "ground_truth": "VERIFIED",
+      "predicted": "VERIFIED",
+      "confidence": 1.0,
+      "evidence_count": 5,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_10",
+      "ground_truth": "REFUTED",
+      "predicted": "REFUTED",
+      "confidence": 0.2518,
+      "evidence_count": 6,
+      "correct": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+severity,comparison,b(C1_only),c(base_only),mid_p
+mild,C1 vs uniform,1,0,0.5000
+mild,C1 vs adwin,1,0,0.5000
+moderate,C1 vs uniform,3,0,0.1250
+moderate,C1 vs adwin,7,0,0.0078
+severe,C1 vs uniform,3,0,0.1250
+severe,C1 vs adwin,7,3,0.2266

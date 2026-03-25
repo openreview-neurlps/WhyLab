@@ -1,0 +1,21 @@
+=== SANITY CHECK: C3-raw vs C3-EMA on E3a metrics ===
+
+--- h=0.0 ---
+  C3_EMA     viol=0.350 final_V=4.73 auc_V=2.04 pearson=0.9479
+  C3_raw     viol=0.499 final_V=0.54 auc_V=0.56 pearson=0.4196
+
+--- h=0.1 ---
+  C3_EMA     viol=0.267 final_V=1.99 auc_V=2.15 pearson=0.8933
+  C3_raw     viol=0.507 final_V=0.62 auc_V=0.67 pearson=0.6149
+
+--- h=0.3 ---
+  C3_EMA     viol=0.277 final_V=2.03 auc_V=2.10 pearson=0.8522
+  C3_raw     viol=0.512 final_V=0.86 auc_V=0.88 pearson=0.6720
+
+--- h=0.5 ---
+  C3_EMA     viol=0.344 final_V=1.78 auc_V=2.01 pearson=0.8081
+  C3_raw     viol=0.512 final_V=0.95 auc_V=1.12 pearson=0.6967
+
+--- MEAN across h ---
+  C3_EMA     mean_viol=0.309 mean_pearson=0.8754 mean_final_V=2.63
+  C3_raw     mean_viol=0.508 mean_pearson=0.6008 mean_final_V=0.74

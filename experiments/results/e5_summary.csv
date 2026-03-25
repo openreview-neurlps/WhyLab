@@ -1,0 +1,8 @@
+ablation,pass_rate,safe_pass_rate,mean_first_pass,mean_attempts,mean_regressions,mean_oscillation,total_accepted,total_rejected,acceptance_rate
+C1_only,0.6867,0.6867,0.8227,3.016,0.0,0.0401,3024,0,1.0
+C2_calibrated,0.6733,0.6733,0.76,3.0467,0.0,0.036,70,3000,0.0228
+C2_default,0.6733,0.6733,0.76,3.0467,0.0,0.036,70,3000,0.0228
+C3_only,0.6867,0.6867,0.8227,3.016,0.0,0.0401,3024,0,1.0
+full_calibrated,0.6733,0.6733,0.76,3.0467,0.0,0.036,70,3000,0.0228
+none,0.6867,0.6867,0.8227,3.016,0.0,0.0401,0,0,0.0
+simple_retry,0.6773,0.6773,0.7993,3.058,0.0,0.0328,0,0,0.0

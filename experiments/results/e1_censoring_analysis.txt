@@ -1,0 +1,17 @@
+=== E1 Censoring-Aware Analysis (40 seeds) ===
+
+KM plot saved
+
+--- moderate ---
+  Log-rank C1 vs Uniform: chi2=0.407, p=0.5236
+  Log-rank C1 vs ADWIN:   chi2=3.289, p=0.0697
+  RMST entropy_weighted    : 78.0 steps
+  RMST uniform             : 54.7 steps
+  RMST adwin               : 1.0 steps
+
+--- severe ---
+  Log-rank C1 vs Uniform: chi2=0.304, p=0.5815
+  Log-rank C1 vs ADWIN:   chi2=1.051, p=0.3053
+  RMST entropy_weighted    : 223.3 steps
+  RMST uniform             : 180.4 steps
+  RMST adwin               : 85.8 steps

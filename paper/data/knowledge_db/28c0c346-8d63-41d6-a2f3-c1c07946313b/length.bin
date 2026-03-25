@@ -1,0 +1,4 @@
+[1. 📋 Executive Summary] ⚠️ **Treatment Effect (ATE)**: -0.1199 (95% CI: [-0.2898, 0.0500])  
+**Scenario Scenario A** 분석 결과, 처치 효과(ATE)는 -0.1199로 추정되었으며, 통계적으로 유의하지 않습니다. AI Debate 시스템은 이를 **CAUSAL**로 판정했습니다.
+
+> **Model Quality**: Correlation with Ground Truth = **0.000** with Ground Truth = �Gd������������

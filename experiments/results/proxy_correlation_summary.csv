@@ -1,0 +1,9 @@
+regime,hallucination_rate,spearman_mean,spearman_std,kendall_mean,kendall_std,n_seeds
+nonstationary,0.0,0.4926,0.0352,0.3554,0.0243,200
+nonstationary,0.1,0.4096,0.0354,0.3082,0.0267,200
+nonstationary,0.3,0.622,0.0299,0.476,0.025,200
+nonstationary,0.5,0.7228,0.0223,0.5648,0.0185,200
+stationary,0.0,0.4927,0.0348,0.3554,0.024,200
+stationary,0.1,0.4088,0.0354,0.3075,0.0267,200
+stationary,0.3,0.622,0.03,0.4759,0.0251,200
+stationary,0.5,0.7229,0.0222,0.5649,0.0185,200

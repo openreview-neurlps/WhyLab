@@ -1,0 +1,24 @@
+=== E3a Mean Pearson across h_rates ===
+  B1_fixed        mean_pearson=0.5606
+  B2_cosine       mean_pearson=0.5314
+  B3_gradclip     mean_pearson=0.1847
+  C3_proxy        mean_pearson=0.8095
+
+=== E3a Tail-Risk Metrics ===
+--- h=0.0 ---
+  B1_fixed        p95=0.1122 max_over=0.2554 cvar95=0.1466
+  B2_cosine       p95=0.0816 max_over=0.1997 cvar95=0.1069
+  B3_gradclip     p95=0.1122 max_over=0.2554 cvar95=0.1469
+  C3_proxy        p95=27.1201 max_over=61.8131 cvar95=42.1668
+
+--- h=0.3 ---
+  B1_fixed        p95=11.0782 max_over=23.8133 cvar95=14.6814
+  B2_cosine       p95=8.7375 max_over=18.2357 cvar95=11.5716
+  B3_gradclip     p95=0.8067 max_over=1.5505 cvar95=1.0006
+  C3_proxy        p95=19.2952 max_over=40.7519 cvar95=27.8911
+
+--- h=0.5 ---
+  B1_fixed        p95=11.7313 max_over=23.2817 cvar95=14.7232
+  B2_cosine       p95=8.8208 max_over=17.2153 cvar95=11.2231
+  B3_gradclip     p95=0.9822 max_over=1.7432 cvar95=1.2085
+  C3_proxy        p95=11.9944 max_over=31.1881 cvar95=16.9889

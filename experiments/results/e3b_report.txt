@@ -1,0 +1,13 @@
+=== E3b Heavy-Tail Stress Test (aligned) ===
+
+--- Gaussian ---
+  C3_EMA     deadlock=0.000 nonzero=1.000 converged=0.775 final_V=2.48
+  C3_raw     deadlock=0.000 nonzero=1.000 converged=0.850 final_V=0.99
+
+--- Student-t(3) ---
+  C3_EMA     deadlock=0.000 nonzero=1.000 converged=0.725 final_V=4.88
+  C3_raw     deadlock=0.000 nonzero=1.000 converged=0.900 final_V=1.42
+
+--- Student-t(1.5) ---
+  C3_EMA     deadlock=0.037 nonzero=0.963 converged=0.400 final_V=22.68
+  C3_raw     deadlock=0.004 nonzero=0.996 converged=0.850 final_V=2.07

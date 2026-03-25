@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "n_scenarios": 10,
+    "timestamp": "20260215_080432"
+  },
+  "metrics": {
+    "accuracy": 0.5,
+    "correct_count": 5,
+    "total_count": 10,
+    "avg_confidence": 0.0,
+    "calibration": {
+      "avg_correct_confidence": 0.0,
+      "avg_wrong_confidence": 0.0,
+      "calibration_gap": 0.0
+    },
+    "evidence_coverage": {
+      "avg_source_types": 2.0,
+      "min_source_types": 2,
+      "max_source_types": 2
+    },
+    "cross_exam_balance": {
+      "avg_balance": 0.0
+    }
+  },
+  "details": [
+    {
+      "scenario": "scenario_01",
+      "ground_truth": "VERIFIED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": false
+    },
+    {
+      "scenario": "scenario_02",
+      "ground_truth": "REFUTED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_03",
+      "ground_truth": "VERIFIED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": false
+    },
+    {
+      "scenario": "scenario_04",
+      "ground_truth": "REFUTED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_05",
+      "ground_truth": "VERIFIED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": false
+    },
+    {
+      "scenario": "scenario_06",
+      "ground_truth": "REFUTED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_07",
+      "ground_truth": "VERIFIED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": false
+    },
+    {
+      "scenario": "scenario_08",
+      "ground_truth": "REFUTED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": true
+    },
+    {
+      "scenario": "scenario_09",
+      "ground_truth": "VERIFIED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": false
+    },
+    {
+      "scenario": "scenario_10",
+      "ground_truth": "REFUTED",
+      "predicted": "REFUTED",
+      "confidence": 0.0,
+      "evidence_count": 2,
+      "correct": true
+    }
+  ]
+}

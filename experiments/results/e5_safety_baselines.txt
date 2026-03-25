@@ -1,0 +1,34 @@
+======================================================================
+E5 SAFETY BASELINES - EQUAL COST (7 LLM CALLS)
+======================================================================
+
+Method                    Pass     Osc      OscEp    Reg    Cost
+----------------------------------------------------------------------
+Reflexion                 0.687    0.0401   90       0      7 seq
+Best-of-3                 0.645    0        0        0      3 par
+Best-of-7                 0.655    0        0        0      7 par
+Self-Consistency-7        0.623    0        0        0      7 par
+Rollback                  0.627    0        0        0      7 seq
+WhyLab C2                 0.673    0.0360   70       0      7 seq
+
+WhyLab C2 recoveries: 70 episodes (failed 1st, passed later)
+Rollback has 0 recoveries (can never improve)
+WhyLab vs Rollback: +4.7%p
+Best-of-7 vs WhyLab: +-1.8%p (requires parallel infra)
+
+======================================================================
+OSCILLATING SUBSET (45 problems)
+======================================================================
+
+Method                    Pass    
+Reflexion                 0.511   
+Best-of-7                 0.263   
+Rollback                  0.111   
+WhyLab C2                 0.409   
+
+======================================================================
+NON-OSCILLATING SUBSET (255 problems)
+======================================================================
+Reflexion                 0.718   
+WhyLab C2                 0.720   
+Delta: 0.2%p (transparent!)
